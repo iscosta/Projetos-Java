@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="_template.xhtml">
+
+	<ui:define name="content">
+		<h2>Cadastro de Bebida</h2>
+		<h:form>
+			<h:panelGrid columns="2">
+				<p:outputLabel  value="Nome" for="nome" />
+				<p:inputText id="nome" value="#{bebidaMB.bebida.nome}"></p:inputText>
+
+				<p:outputLabel value="Preço"  for="preco" />
+				<p:inputText id="preco" value="#{bebidaMB.bebida.preco}"></p:inputText>
+
+				<p:outputLabel value="Estoque" for="estoque" />
+				<p:spinner id="estoque" value="#{bebidaMB.bebida.estoque}" />
+				
+				<p:outputLabel value="Data de Validade" for="data"/>
+				<p:calendar id="data" value="#{bebidaMB.bebida.dataValidade.time}" />
+			
+
+				<p:commandButton value="Cadastrar"
+	    				action="#{bebidaMB.cadastrar}"
+	    				styleClass="btn btn-primary" />
+			</h:panelGrid>
+			
+		</h:form>
+		
+		<h2>Lista de Bebidas</h2>
+	    	<h:dataTable styleClass="table" value="#{bebidaMB.lista}" var="bebida">
+	    		<h:column>
+	    			<f:facet name="header">Nome</f:facet>
+	    			#{bebida.nome}
+	    		</h:column>
+	    		<h:column>
+	    			<f:facet name="header">Preço</f:facet>
+	    			#{bebida.preco}
+	    		</h:column>
+	    		<h:column>
+	    			<f:facet name="header">Estoque</f:facet>
+	    			#{bebida.estoque}
+	    		</h:column>
+	    		<h:column>
+	    			<f:facet name="header">Data de validade</f:facet>
+	    			#{bebida.dataValidade.time}
+	    		</h:column>
+	    		</h:dataTable>
+	</ui:define>
+</ui:composition>
+</html>
