@@ -1,0 +1,234 @@
+/* imports */
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+/* global */
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.3em;
+    background: #2d3b36 url(../images/background4.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 0px;
+}
+.wrapper {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 95%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 1.5em;
+    margin-top: 100px;
+}
+h1 {
+    font-family: "Lobster", cursive;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+h2 {
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+p {
+    font-size: 1.3em;
+}
+label {
+    overflow: hidden;
+    color: white;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 0.5em 0 12px;
+    padding-left: 25px;
+    background: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid;
+    margin-bottom: 1em;
+}
+input[type="text"]:hover {
+    border-bottom-color: #68B3FF;
+}
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 0.5em 0 12px;
+    padding-left: 25px;
+    background: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    border: none;
+    z-index: 1;
+    text-align: center;
+}
+input[type="date"]:hover,
+input[type="time"]:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+input[type="radio"]  {
+    color: #292321;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+p, input[type="radio"]{
+	padding:10px;
+	text-align:center;
+	border-style: solid;
+	border:1px;
+	border-radius:8px;
+	background-color: rgba(29, 161, 147, 0.3);
+}
+
+.form {
+    width: 20em;
+    margin-left: 2em;
+    margin-right: 15em;
+    float: left;
+}
+.valores {
+    width: 20em;
+    padding-left: 25px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+/*TABELA*/
+
+.tabela {
+    overflow: hidden;
+    margin-top: 10em;
+    padding-left: 25px;
+}
+@import "http://fonts.googleapis.com/css?family=Montserrat:300,400,700";
+.rwd-table {
+    margin: 1em 0;
+    min-width: 300px;
+}
+.rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.rwd-table th {
+    display: none;
+}
+.rwd-table td {
+    display: block;
+}
+.rwd-table td:first-child {
+    padding-top: .5em;
+}
+.rwd-table td:last-child {
+    padding-bottom: .5em;
+}
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 6.5em;
+    display: inline-block;
+}
+@media (min-width: 480px) {
+    .rwd-table td:before {
+        display: none;
+    }
+}
+.rwd-table th,
+.rwd-table td {
+    text-align: left;
+}
+@media (min-width: 480px) {
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+        padding-left: 0;
+    }
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+        padding-right: 0;
+    }
+}
+.rwd-table {
+    background:#1AAB8A;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
+}
+.rwd-table tr:hover{
+	background:#fff;
+	color:#1AAB8A;
+}
+.rwd-table th,
+.rwd-table td {
+    margin: .5em 1em;
+}
+@media (min-width: 480px) {
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
+}
+.rwd-table th,
+.rwd-table td:before {
+    color: #dd5;
+}
+
+/*Forma Pagamento*/
+
+
+
+/*Botão Confirmar Pagamento*/
+
+#btnConfirma {
+    text-align: center;
+}
+button {
+    background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+	margin-top:10px;
+}
+button:hover {
+    background: #fff;
+    color: #1AAB8A;
+}
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #1AAB8A;
+    transition: 400ms ease all;
+}
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
